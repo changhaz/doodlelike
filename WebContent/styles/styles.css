@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+}
+
+header {
+	position: relative;
+	top: 0;
+	left: 0;	
+	transform: translateY(-22%);
+	width: 100%;
+	background-color: #990000;
+	box-shadow: 5px 5px 5px gray;
+	height: 100px;
+}
+
+h1 {
+	position: relative;
+	top: 30%;
+	left: 10%;
+	color: white;
+}
+
+p{
+	color: black;
+}
+#main {
+	text-align: center;
+	position: relative;
+	margin: 30px;
+	padding: 30px;
+	top: 30%;
+	width: 60%;
+	height: auto;
+	background-color: white;
+	top: 0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	color: #CC0000;
+	border: 1px solid #CC0000;
+	box-shadow: 10px 10px 10px gray;
+}
+
+section {
+	width: 80%;
+	position: relative;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid #CC0000;
+	margin-left: auto;
+}
+
+body div section label {
+	text-align: left;
+	font-size: 24px;
+}
+
+body div section input {
+	margin: 20px;
+	font-size: 20px;
+	color: #CC0000;
+}
+
+body div table input{
+	font-size: 20px;
+	color: #CC0000;
+}
+button {
+	positive: relative;
+	margin: 20px;
+	font-size: 20px;
+	color: #CC0000;
+}
+
+#btn_del, #btn_edit {
+	margin: 5px;
+	font-size: 14px;
+	color: #CC0000;
+}
+#btn_addtime {
+	positive: relative;
+	margin: 18px;
+	font-size: 14px;
+	color: #CC0000;
+}
+
+body div label {
+	font-size: 20px;
+}
+
+body div table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body div table tr{
+	border: 1px solid black;
+}
+/** footer **/
+.btmline {
+	position: relative;
+	margin-top: 30px;
+	height: 2px;
+	background: #990000;
+	width: 100%;
+}
+
+footer {
+	position: relative;
+	height: 50px;
+	width: 100%;
+}
