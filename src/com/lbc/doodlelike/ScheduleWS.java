@@ -32,15 +32,16 @@ public class ScheduleWS {
 	private IDLService dlservice;
 
 	@GET
+	@Path("/hello")
 	@Produces(MediaType.TEXT_HTML)
 	public String home() {
 		StringBuffer strbuf = new StringBuffer();
 		strbuf.append("<!DOCTYPE html><html><body id = '")
 				.append("'></body><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script> <script src='../js/main.js'>")
 				.append("</script><script>$('body').load('../index.html')</script></html>");
-		return null;
+		return "Hello world!";
 	}
-
+	
 	/**
 	 * Save the updated attendees' information to database.
 	 * 
