@@ -24,7 +24,7 @@ $("#btn_send").click(function() {
 	console.log(timeslots);
 	/* Call restful services and pass event information to the server */
 	$.ajax({
-		url : "http://localhost:8080/doodlelike/services/sendSched",
+		url : "http://54.81.51.121/doodlelike/services/sendSched",
 		data : {
 			email : email,
 			name : name,

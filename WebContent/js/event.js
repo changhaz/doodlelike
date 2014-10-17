@@ -15,7 +15,7 @@ $(document).ready(function() {
 });
 
 $.ajax({
-	url : "http://localhost:8080/doodlelike/services/schedule/" + id,
+	url : "http://54.81.51.121/doodlelike/services/schedule/" + id,
 	success : function(data) {
 		col = data.time.length;
 		var event = data.event;
@@ -106,7 +106,7 @@ var save = function() {
 	// var tbl = $("table").html();
 	$("table").append(addrow());
 	console.log("save!" + rowinfo);
-	var url = "http://localhost:8080/doodlelike/services/save";
+	var url = "http://54.81.51.121/doodlelike/services/save";
 	$.ajax({
 		url : url,
 		data : {
