@@ -2,7 +2,7 @@
  * This js file includes activity of creating event and sending it to server.
  */
 /* Send method */
-var host = "http://54.81.51.121:8080";
+var host = "http://54.81.51.121";
 $("#btn_send").click(function() {
 	var timeslots = ""; /* a string to store all time slots */
 	var email = $("#email").val();

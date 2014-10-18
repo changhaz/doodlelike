@@ -138,7 +138,7 @@ public class ScheduleWS {
 		dlservice = new DLServiceImpl();
 		System.out.println("******:" + time.toString());
 		dlservice.createEvent(id, event, location, time);
-		String url = "http://54.81.51.121:8080/doodlelike/services/schd/"
+		String url = "http://54.81.51.121/doodlelike/services/schd/"
 				+ id.toString();
 		String timestr = "";
 		for(String str: time){

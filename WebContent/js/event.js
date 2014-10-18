@@ -1,7 +1,7 @@
 /**
  * 
  */
-var host = "http://54.81.51.121:8080";
+var host = "http://54.81.51.121";
 var col;
 var id = $('body').attr('id');
 console.log(id);
