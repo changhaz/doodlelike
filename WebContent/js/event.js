@@ -1,6 +1,7 @@
 /**
  * 
  */
+var host = "http://54.81.51.121:8080";
 var col;
 var id = $('body').attr('id');
 console.log(id);
@@ -15,7 +16,7 @@ $(document).ready(function() {
 });
 
 $.ajax({
-	url : "http://54.81.51.121/doodlelike/services/schedule/" + id,
+	url : host + "/doodlelike/services/schd/schedule/" + id,
 	success : function(data) {
 		col = data.time.length;
 		var event = data.event;
@@ -106,7 +107,7 @@ var save = function() {
 	// var tbl = $("table").html();
 	$("table").append(addrow());
 	console.log("save!" + rowinfo);
-	var url = "http://54.81.51.121/doodlelike/services/save";
+	var url = host + "/doodlelike/services/schd/save";
 	$.ajax({
 		url : url,
 		data : {

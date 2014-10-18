@@ -27,7 +27,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 
-@Path("/")
+@Path("/schd")
 public class ScheduleWS {
 	private IDLService dlservice;
 
@@ -138,7 +138,7 @@ public class ScheduleWS {
 		dlservice = new DLServiceImpl();
 		System.out.println("******:" + time.toString());
 		dlservice.createEvent(id, event, location, time);
-		String url = "http://54.81.51.121/doodlelike/services/"
+		String url = "http://54.81.51.121:8080/doodlelike/services/schd/"
 				+ id.toString();
 		String timestr = "";
 		for(String str: time){
@@ -184,8 +184,8 @@ public class ScheduleWS {
 		if (id != null) {
 			return "<!DOCTYPE html><html><body id = '"
 					+ id
-					+ "'></body><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script> <script src='../js/main.js'>"
-					+ "</script><script>$('body').load('../pages/schedule.html')</script></html>";
+					+ "'></body><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script> <script src='../../js/main.js'></script>"
+					+ "<script>$('body').load('../../pages/schedule.html')</script></html>";
 		} else
 			return "<html><p>Who are you!</p></html>";
 	}
@@ -200,13 +200,13 @@ public class ScheduleWS {
 
 	public static void apachemail(String content, String to) {
 		HtmlEmail email = new HtmlEmail();
-		email.setHostName("smtp.googlemail.com");
+		email.setHostName("smtp.mail.yahoo.com");
 		email.setSmtpPort(465);
-		email.setAuthenticator(new DefaultAuthenticator("lbchencn@gmail.com",
-				"Fight#88@02"));
+		email.setAuthenticator(new DefaultAuthenticator("lbcdev@yahoo.com",
+				"Xmuchen@88"));
 		email.setSSLOnConnect(true);
 		try {
-			email.setFrom("lbchencn@gmail.com");
+			email.setFrom("lbcdev@yahoo.com");
 			email.setSubject("TestMail");
 			email.setHtmlMsg(content);
 			email.addTo(to);
@@ -216,5 +216,8 @@ public class ScheduleWS {
 			e.printStackTrace();
 		}
 
+	}
+	public static void main(String[] args){
+		apachemail("test", "longbin.chen@sjsu.edu");
 	}
 }

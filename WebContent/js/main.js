@@ -2,6 +2,7 @@
  * This js file includes activity of creating event and sending it to server.
  */
 /* Send method */
+var host = "http://54.81.51.121:8080";
 $("#btn_send").click(function() {
 	var timeslots = ""; /* a string to store all time slots */
 	var email = $("#email").val();
@@ -24,7 +25,7 @@ $("#btn_send").click(function() {
 	console.log(timeslots);
 	/* Call restful services and pass event information to the server */
 	$.ajax({
-		url : "http://54.81.51.121/doodlelike/services/sendSched",
+		url : host + "/doodlelike/services/schd/sendSched",
 		data : {
 			email : email,
 			name : name,
@@ -34,6 +35,8 @@ $("#btn_send").click(function() {
 		},
 		success : function(data) {
 			console.log("Send email....." + data);
+			$("#main").load(host + "/doodlelike/pages/create_success.html");
+			console.log("back to home page");
 		}
 	});
 });

@@ -2,13 +2,14 @@
 
 body {
 	margin: 0;
-	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia,
+		serif;
 }
 
 header {
 	position: relative;
 	top: 0;
-	left: 0;	
+	left: 0;
 	transform: translateY(-22%);
 	width: 100%;
 	background-color: #990000;
@@ -23,9 +24,10 @@ h1 {
 	color: white;
 }
 
-p{
+p {
 	color: black;
 }
+
 #main {
 	text-align: center;
 	position: relative;
@@ -55,6 +57,16 @@ section {
 	margin-left: auto;
 }
 
+section #backhome {
+	width: 80%;
+	position: relative;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 0px solid #CC0000;
+	margin-left: auto;
+}
+
 body div section label {
 	text-align: left;
 	font-size: 24px;
@@ -66,10 +78,11 @@ body div section input {
 	color: #CC0000;
 }
 
-body div table input{
+body div table input {
 	font-size: 20px;
 	color: #CC0000;
 }
+
 button {
 	positive: relative;
 	margin: 20px;
@@ -77,11 +90,12 @@ button {
 	color: #CC0000;
 }
 
-#btn_del, #btn_edit {
+#btn_del,#btn_edit {
 	margin: 5px;
 	font-size: 14px;
 	color: #CC0000;
 }
+
 #btn_addtime {
 	positive: relative;
 	margin: 18px;
@@ -98,7 +112,7 @@ body div table {
 	margin-right: auto;
 }
 
-body div table tr{
+body div table tr {
 	border: 1px solid black;
 }
 /** footer **/
